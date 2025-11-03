@@ -1,0 +1,53 @@
+# HR Analytics Project - Maintenance Log
+
+## Version 1.1 - Data Quality Update
+**Date:** October 18, 2025
+**Changes:** Added 50 new employee records
+
+### Details
+- **New Employee IDs:** 2069-2118
+- **Previous Total:** 1,470 employees
+- **New Total:** 1,520 employees
+
+### Actions Taken
+1. Generated 50 new employee records with realistic data
+2. Inserted records into `raw_data.hr_employees` table
+3. Ran `dbt run` - all 5 models updated successfully
+4. Refreshed Power BI dataset
+5. Verified data quality - all metrics calculated correctly
+
+### Validation
+- ✓ All dbt tests passed
+- ✓ Risk scores calculated correctly for new employees
+- ✓ Power BI dashboard updated successfully
+- ✓ No schema changes required
+
+## Version 1.2 - Enhancement  
+**Date:** October 18, 2025
+**Changes:** Added training investment scoring and analysis capabilities
+
+### Details
+- **New Metric:** `training_investment_score` (0-3 scale)
+  - 0 = No training
+  - 1 = Minimal training (1-2 sessions)
+  - 2 = Regular training (3-5 sessions)  
+  - 3 = High investment (6+ sessions)
+- **New Visualizations:** Created "Training Analysis" dashboard page with 5 visuals
+
+### Actions Taken
+1. Updated `int_employee_metrics.sql` to add training_investment_score calculation
+2. Updated `fct_employee_metrics.sql` to include new field
+3. Ran `dbt run` - all models rebuilt successfully
+4. Created new Power BI page with training analysis visuals
+5. Added interactive filters (promotion status, education level, gender)
+
+### Business Value
+- Enables HR to analyze correlation between training investment and attrition
+- Shows training distribution across departments and performance levels
+- Identifies training gaps and investment opportunities
+- Company average training score: 1.57
+
+### Validation
+- ✓ New metric calculated correctly for all 1,520 employees
+- ✓ Visuals display accurate data
+- ✓ Dashboard performance maintained

@@ -1,0 +1,25 @@
+##dbt artifacts
+target/
+dbt_packages/
+logs/
+analyses/
+tests/
+snapshots/
+seeds/
+macros/
+
+##Credentials
+profiles.yml
+.dbt/
+
+##Data files
+*.csv
+*.xlsx
+
+##OS files
+.DS_Store
+Thumbs.db
+
+##Python
+__pycache__/
+*.pyc

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: hr_analytics
+    schema: raw_data
+    tables:
+      - name: hr_employees
+        description: "Raw HR employee data"
